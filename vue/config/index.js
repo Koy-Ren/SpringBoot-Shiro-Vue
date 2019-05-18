@@ -22,15 +22,15 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    host: 'localhost',
-    port: 9520,
+    host: '192.168.31.76',
+    port: 80,
     autoOpenBrowser: true,
     autoOpenPage: '/login',
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://localhost:8080',
+        target: 'http://localhost:18081',
         pathRewrite: {
           '^/api': '/'
         }
