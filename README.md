@@ -83,3 +83,6 @@ npm run dev
 
 ## 分配权限页面效果
 ![分配权限页面](http://img.heeexy.com/role_permission.png)
+
+
+test windows
