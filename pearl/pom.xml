@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.pearl</groupId>
-    <artifactId>auth</artifactId>
+    <artifactId>pearl-auth</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
     <name>auth-service</name>
@@ -66,19 +66,12 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.1.1</version>
                 <configuration>
-                    <!-- 指定打包的jar包输出路径-->
-                    <outputDirectory>${user.home}/my-own-item</outputDirectory>
-                    <!--不打入jar包的文件类型或者路径-->
-                    <!-- <excludes>
-                        <exclude>**/*.properties</exclude>
-                        <exclude>**/*.xml</exclude>
-                        <exclude>**/*.yml</exclude>
-                        <exclude>static/**</exclude>
-                        <exclude>templates/**</exclude>
-                    </excludes> -->
+                    <descriptors>
+                        <descriptor>src/main/resources/assembly/src.xml</descriptor>
+                    </descriptors>
                 </configuration>
             </plugin>
         </plugins>
